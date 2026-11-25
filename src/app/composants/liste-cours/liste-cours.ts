@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+
+export interface Cours {
+  titre: string;
+  categorie: string;
+  duree: string;
+  places: number;
+}
 
 @Component({
   imports: [],
@@ -7,7 +14,12 @@ import { Component } from '@angular/core';
   templateUrl: './liste-cours.html',
 })
 export class ListeCours {
-  cours = [
+
+  @Output() coursSelectionne = new EventEmitter<Cours>();
+
+  coursActif: Cours | null = null;
+
+  cours: Cours[] = [
     {
       titre: 'Angular avancé',
       categorie: 'Front-end',
@@ -33,4 +45,9 @@ export class ListeCours {
       places: 20,
     },
   ];
+
+  selectionner(c: Cours) {
+    this.coursActif = c;
+    this.coursSelectionne.emit(c);
+  }
 }
