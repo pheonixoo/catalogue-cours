@@ -4,4 +4,10 @@
 
 <app-detail-cours [cours]="coursSelectionne"></app-detail-cours>
 
-<app-pied-page></app-pied-page>
+@defer (on viewport) {
+  <app-pied-page></app-pied-page>
+} @placeholder {
+  <div class="pied-page-placeholder">...</div>
+} @loading {
+  <p>Chargement...</p>
+}
