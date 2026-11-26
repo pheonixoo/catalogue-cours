@@ -1,6 +1,6 @@
 
 import { Routes } from '@angular/router';
-
+import { Inscription } from './pages/inscription/inscription';
 import { Accueil } from './pages/accueil/accueil';
 import { PageDetail } from './pages/page-detail/page-detail';
 import { Connexion } from './pages/connexion/connexion';
@@ -25,6 +25,12 @@ export const routes: Routes = [
     canActivate: [authGuard],
     title: 'Mes inscriptions'
   },
+  {
+  path: 'cours/:id/inscription',
+  component: Inscription,
+  canActivate: [authGuard],
+  title: 'Inscription'
+},
 
   { path: '**', component: Introuvable, title: 'Page introuvable' },
 ];
