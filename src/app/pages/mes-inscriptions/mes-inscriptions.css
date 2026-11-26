@@ -1,0 +1,41 @@
+.liste-inscriptions {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.carte-inscription {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.carte-inscription h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.carte-inscription p {
+  margin: 0.5rem 0;
+}
+
+.carte-inscription button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #dc3545;
+  color: white;
+  cursor: pointer;
+}
+
+.carte-inscription button:hover {
+  background: #b02a37;
+}
+
+a {
+  display: inline-block;
+  margin-top: 1rem;
+}
